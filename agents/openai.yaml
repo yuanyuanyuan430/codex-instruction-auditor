@@ -1,0 +1,3 @@
+interface:
+  display_name: "Codex Instruction Auditor"
+  short_description: "Audit and streamline Codex instructions"
