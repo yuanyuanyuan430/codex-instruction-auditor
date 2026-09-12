@@ -23,6 +23,6 @@ Use this skill when the user asks to clean up, organize, shorten, or review Code
 4. Keep entrypoints short and route conditional detail to existing references. Remove repetition only when the preserved behavior is clear.
 5. Validate frontmatter, references, markers, and the actual Codex skill scan. Report changed files, checks, and any untouched risk.
 
-For detailed review criteria, read [references/review-policy.md](references/review-policy.md). For the edit and verification checklist, read [references/cleanup-checklist.md](references/cleanup-checklist.md).
+For detailed review criteria, read [references/review-policy.md](references/review-policy.md). For the edit and verification checklist, read [references/cleanup-checklist.md](references/cleanup-checklist.md). When writing a public README or tutorial, optionally read [references/engagement-guide.md](references/engagement-guide.md) for a truthful hook, reversal, payoff, and call to action.
 
 Do not claim that a saved configuration is active without runtime readback. Do not change model, provider, account, credential, or production settings as part of an instruction cleanup unless that change is separately requested.

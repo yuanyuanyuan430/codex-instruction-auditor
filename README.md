@@ -2,6 +2,9 @@
 
 一个用于审计和整理 Codex 全局指令、Skills 与 Prompt 入口的个人开源 Skill。
 
+> 先把你的 Codex 指令变成一张可核查的地图，再决定删什么。  
+> Map your Codex instruction surface before deciding what to remove.
+
 这是一个**基于 OpenAI Developers 官方文章的工程化实现**：它把文章中关于“减少上下文膨胀、缩短 Skill 描述、采用渐进式披露、按任务读取文档、明确完成标准”的建议，落成一个可以在本地运行的审计工作流。
 
 > This is a personal implementation inspired by an official OpenAI Developers article. It is not an OpenAI-maintained product or an official OpenAI package.
@@ -59,6 +62,16 @@ python3 scripts/audit_codex.py --root ~/.codex
 5. **Validate**：检查 frontmatter、引用、marker，并运行 Codex Skill 扫描。
 6. **Report**：区分观察结果、实际修改、验证证据和仍存在的限制。
 
+## 怎样把说明写得让人愿意使用 / How the docs earn adoption
+
+工程规则需要准确，也需要让读者快速看懂价值。本项目提供一个可选的四段式表达层：**钩子 / hook** 先说读者正在承受的混乱；**反转 / reversal** 说明清理不是盲目删短；**高潮 / payoff** 展示可以检查的前后变化；**爽点 / call to action** 给出一条低风险命令，让读者马上得到一个小胜利。
+
+Technical documentation must be accurate and easy to act on. This project adds an optional four-part editorial layer: a **hook** names the reader’s current pain; a **reversal** corrects the “just delete until it is short” instinct; a **payoff** shows a checkable before-and-after; and a **call to action** gives the reader a low-risk first command.
+
+例如，不写“它会让 Codex 变聪明”，而是写清楚：整理前有哪些失效链接，整理后保留了哪些契约，运行哪条只读命令可以复核结果。完整的中英文模板和真实性检查见 [`references/engagement-guide.md`](references/engagement-guide.md)。
+
+For example, do not claim that the tool “makes Codex smarter.” Show which broken links existed, which contracts were preserved, and which read-only command verifies the result. The full bilingual template and truthfulness checklist are in [`references/engagement-guide.md`](references/engagement-guide.md).
+
 ## 设计边界 / Scope boundaries
 
 这个 Skill 专注于 Codex 指令、Skills 和 Prompt 配置的整理。
@@ -81,12 +94,13 @@ codex-instruction-auditor/
 ├── scripts/audit_codex.py
 ├── references/review-policy.md
 ├── references/cleanup-checklist.md
+├── references/engagement-guide.md
 └── README.md
 ```
 
 - `SKILL.md`：入口规则和工作流
 - `scripts/audit_codex.py`：确定性审计脚本
-- `references/`：审查标准和清理检查表
+- `references/`：审查标准、清理检查表和中英文说明模板
 - `agents/openai.yaml`：Codex UI 元数据
 
 ## 验证 / Validation
