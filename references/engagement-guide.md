@@ -1,4 +1,4 @@
-# 说明文案的钩子、反转、高潮与爽点 / Hooks, Reversals, Payoff, and CTA
+# 说明文案的钩子、反转、高潮与首个可验证行动 / Hooks, Reversals, Payoff, and First Action
 
 这份指南是本项目对文档表达方式的补充，不是 OpenAI 官方文章的额外规范。OpenAI 官方文章负责提供工程原则；本指南负责把这些原则讲得更容易理解、更容易被采用。
 
@@ -43,11 +43,11 @@ The payoff is not an adjective. It is a result the reader can check: find the is
 
 这是示例格式，不代表新安装环境的固定结果。Use evidence such as file counts, scan output, validation results, and public links. Never invent a before/after number for a new installation.
 
-### 4. 爽点与行动：让读者马上获得一个小胜利
+### 4. 爽点与行动：让读者马上获得一个小胜利 / First win and next action
 
-“爽点”在工具文档里应当是低风险、可重复的小胜利：一条只读命令、一份清晰报告、一个可回滚备份，或一个已经公开可访问的示例。最后给出下一步命令，而不是只留下口号。
+“爽点”在工具文档里应当是低风险、可重复的小胜利（first win）：一条只读命令、一份清晰报告、一个可回滚备份，或一个已经公开可访问的示例。最后给出下一步命令（next action），而不是只留下口号。
 
-In technical documentation, the payoff should be a low-risk, repeatable win: a read-only command, a clear report, a recoverable backup, or a public example. End with the next command instead of a slogan.
+In technical documentation, the payoff should be a low-risk, repeatable first win: a read-only command, a clear report, a recoverable backup, or a public example. End with the next action instead of a slogan.
 
 ```text
 python3 scripts/audit_codex.py --root ~/.codex
@@ -74,3 +74,4 @@ python3 scripts/audit_codex.py --root ~/.codex
 - 爽点必须能由读者在自己的环境中复现。
 - 权威来源、个人实现和当前环境结果分开标注。
 - 中英文内容表达相同边界，不用英文夸大中文没有承诺的能力。
+- 这套表达只用于公开 README、教程和项目介绍；不得为了制造冲击力改写 Skill frontmatter、触发条件、权限边界、验收标准、运行时 marker 或审计输出。
